@@ -1,0 +1,53 @@
+<?php
+
+namespace StudentBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Student
+ *
+ * @ORM\Table(name="student")
+ * @ORM\Entity
+ */
+class Student
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nom", type="string", length=150, nullable=false)
+     */
+    private $nom;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="prenom", type="string", length=150, nullable=false)
+     */
+    private $prenom;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="naissance", type="date", nullable=false)
+     */
+    private $naissance;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="classe", type="integer", nullable=false)
+     */
+    private $classe;
+
+
+}

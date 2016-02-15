@@ -1,0 +1,6 @@
+AppBundle\Entity\Student:
+    student:
+        nom: <name()>
+        prenom: <surname()>
+        naissance: <date()>
+        classe: <number()>

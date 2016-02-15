@@ -1,0 +1,16 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}StudentBundle:Student:showAll{% endblock %}
+
+{% block body %}
+    <a href="{{ path('student_create') }}">Créer</a><br><br><br>
+
+    {% for student in students %}
+        <a href="{{ path('student_show', {'id': student.id}) }}">
+            {{ student.nom }} {{ student.prenom }}<br>
+        </a>
+        <a href="{{ path('student_update', {'id': student.id}) }}">Edit  </a><a href="{{ path('student_delete', {'id': student.id}) }}">Delete</a>
+        <br><br>
+    {% endfor %}
+
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}StudentBundle:Student:show{% endblock %}
+
+{% block body %}
+
+ {{ student.prenom }}
+ {{ student.nom }}<br>
+ {{ student.naissance | date("d, M, Y")}}<br>
+ {{ student.classe }}
+
+{% endblock %}
